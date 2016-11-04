@@ -14,7 +14,7 @@ echo ""
 testfilesource=$testfilesourcedir/$testfilesourcefile
 
 printf "Test 1 - Verify rdiff-backup Integrity... "
-rdiff-backup --verify $backup_location > /dev/null 2>&1
+`which rdiff-backup` --verify $backup_location > /dev/null 2>&1
 error=$?
 if [ "$error" = "0" ]; then
   echo PASS
