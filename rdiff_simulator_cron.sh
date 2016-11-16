@@ -10,7 +10,7 @@ source $location/rdiff_simulator.sh > /tmp/rdiff-backup-simulator-email
 if [ "$error" != "0" ]; then
   echo "Error Code $error"
 	echo "Emailing Error Report to $admin"
-  `which mail` -s "rdiff-backup error on $(hostname)" $admin < /tmp/rdiff-backup-simulator-email
+  `/usr/bin/which mail` -s "rdiff-backup error on $(hostname)" $admin < /tmp/rdiff-backup-simulator-email
   echo ""
 fi
 cat /tmp/rdiff-backup-simulator-email
